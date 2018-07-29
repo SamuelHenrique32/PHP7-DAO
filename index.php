@@ -13,7 +13,6 @@
 
     //carrega uma lista de usuarios
    /* $lista = Usuario::getList();
-
     echo json_encode($lista);*/
 
    //carrega uma lista de usuarios buscando pelo login
@@ -27,14 +26,17 @@
 
     //insere aluno no banco
    /* $aluno = new Usuario("aluno", "123");
-
     $aluno->insert();
     echo $aluno;*/
 
-   $usuario = new Usuario();
+   //altera um usuario
+   /*$usuario = new Usuario();
    $usuario->loadById(8);
    $usuario->update("professor", "senha");
+   echo $usuario;*/
 
-   echo $usuario;
-
+    $usuario = new Usuario();
+    $usuario->loadById(7);
+    $usuario->delete();
+    echo $usuario;
 ?>
