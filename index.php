@@ -21,10 +21,20 @@
     echo json_encode($search);*/
 
    //carrega um usuario usando o login e a senha
-    $usuario = new Usuario();
+    /*$usuario = new Usuario();
     $usuario->login("root", "789");
-    echo $usuario;
+    echo $usuario;*/
 
+    //insere aluno no banco
+   /* $aluno = new Usuario("aluno", "123");
 
+    $aluno->insert();
+    echo $aluno;*/
+
+   $usuario = new Usuario();
+   $usuario->loadById(8);
+   $usuario->update("professor", "senha");
+
+   echo $usuario;
 
 ?>
